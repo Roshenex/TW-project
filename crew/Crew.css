@@ -1,0 +1,273 @@
+/* Custom measurements */
+/* Mixin */
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 55px);
+  height: 136px;
+  margin-left: 55px;
+}
+.top_icon {
+  width: 48px;
+  height: 48px;
+  margin-top: 20px;
+  align-self: center;
+}
+.top_nav {
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: end;
+  max-width: 80vw;
+  height: 96px;
+  padding-right: 165px;
+  margin-left: 50px;
+}
+.top_nav a {
+  text-decoration: none;
+  width: auto;
+  height: 20px;
+  margin-top: 39px;
+  margin-left: 48px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  transition: all 0.5s ease;
+}
+.top_nav a:hover {
+  padding-bottom: 55px;
+  border-bottom: 3px solid gray;
+}
+.top_nav a:active {
+  padding-bottom: 55px;
+  border-bottom: 3px solid white;
+}
+.top span {
+  font-weight: bold;
+  margin-right: 12px;
+}
+.top_menu-btn--open {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 33px;
+  background-size: cover;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-width: 0px;
+  background-image: url(../nav/icons/icon-hamburger.svg);
+}
+.top_menu-btn--close {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 33px;
+  background-size: cover;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-width: 0px;
+  background-image: url(../nav/icons/icon-close.svg);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1100px) {
+  :root {
+    font-size: 75px;
+  }
+  .top_nav {
+    width: 630px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (max-width: 785px) {
+  :root {
+    font-size: 100px;
+  }
+  .top {
+    margin-top: 0px;
+  }
+  .top_nav {
+    max-width: 450px;
+    margin-left: 25px;
+    padding-right: 48px;
+  }
+  .top a {
+    margin-left: 25px;
+  }
+  .top span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .top {
+    margin-top: 0px;
+  }
+  .top_nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+    max-width: 80vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 120px;
+    padding-right: 0px;
+    padding-left: 60px;
+    margin-left: 50px;
+  }
+  .top a {
+    max-width: auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0px;
+    border-color: transparent;
+    margin-left: 0px;
+  }
+  .top a:hover {
+    padding-bottom: 0px;
+    border-color: transparent;
+  }
+  .top span {
+    margin-right: 10px;
+    width: 20px;
+    display: block;
+  }
+  .top_menu-btn--close {
+    display: block;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .top_nav {
+    padding-left: 30px;
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/background-crew-desktop.jpg);
+  background-color: hsl(230, 35%, 7%);
+  color: hsl(0, 0%, 100%);
+  background-size: 2000px 1400px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.buttons {
+  text-transform: uppercase;
+  margin-left: 167px;
+  margin-top: 80px;
+  height: 730px;
+}
+.buttons_category {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  cursor: default;
+}
+.buttons span {
+  color: hsl(226, 11%, 31%);
+  margin-right: 0.24rem;
+  font-weight: 800;
+}
+.buttons .subtitle {
+  color: hsl(226, 11%, 31%);
+  margin-top: 154px;
+  font-family: "Bellefair", sans-serif;
+  font-weight: 100;
+}
+.buttons .title {
+  color: hsl(0, 0%, 100%);
+  margin-top: 15px;
+  font-family: "Bellefair";
+  word-spacing: 5px;
+  font-weight: 100;
+  font-size: 56px;
+}
+.buttons .paragraf {
+  color: hsl(231, 77%, 90%);
+  margin-top: 27px;
+  font-family: "Barlow";
+  max-width: 500px;
+  height: 100px;
+  padding-right: 20px;
+  line-height: 35px;
+  cursor: default;
+  font-weight: 100;
+  text-transform: none;
+  font-size: 18px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 700px;
+}
+.content .picture {
+  position: absolute;
+  left: 800px;
+}
+.content_commanderimage {
+  top: 10px;
+}
+.content_missionspecialist {
+  top: 70px;
+}
+.content_pilot {
+  top: 65px;
+}
+.content_flightengineer {
+  top: 110px;
+}
+
+.btns {
+  margin-top: 120px;
+  letter-spacing: 25px;
+}
+.btns_btn1 {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.btns_btn2 {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: hsl(226, 11%, 31%);
+}
+.btns_btn3 {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: hsl(226, 11%, 31%);
+}
+.btns_btn4 {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-color: hsl(226, 11%, 31%);
+}/*# sourceMappingURL=Crew.css.map */
