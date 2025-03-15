@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/background-animatie.jpg);
+  background-repeat: no-repeat;
+  background-size: 2000px 1400px;
+  background-position: top left;
+  color: white;
+  min-height: 100vh;
+}
+
+.canvas {
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+@keyframes meteor-fall {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+.star1 {
+  margin-top: -340px;
+  margin-left: 700px;
+}
+
+.star2 {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.animatie {
+  position: relative;
+}
+
+.terra {
+  background-image: url(images/Terra.png);
+  background-repeat: no-repeat;
+  background-size: 400px 300px;
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  margin: 150px;
+  z-index: 1;
+}
+
+#moon {
+  display: inline-block;
+  position: absolute;
+  left: 120px;
+  top: 230px;
+  width: 72px;
+  height: 72px;
+  background-image: url(images/moon.png);
+  background-repeat: no-repeat;
+  animation: rotate 5s linear infinite;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    left: 50px;
+    top: 230px;
+    z-index: 2;
+  }
+  5% {
+    left: 100px;
+    top: 240px;
+    z-index: 2;
+  }
+  10% {
+    left: 150px;
+    top: 250px;
+    z-index: 2;
+  }
+  15% {
+    left: 200px;
+    top: 260px;
+    z-index: 2;
+  }
+  20% {
+    left: 250px;
+    top: 270px;
+    z-index: 2;
+  }
+  25% {
+    left: 300px;
+    top: 280px;
+    z-index: 2;
+  }
+  30% {
+    left: 350px;
+    top: 290px;
+    z-index: 2;
+  }
+  35% {
+    left: 400px;
+    top: 300px;
+    z-index: 2;
+  }
+  40% {
+    left: 450px;
+    top: 310px;
+    z-index: 2;
+  }
+  45% {
+    left: 500px;
+    top: 320px;
+    z-index: 2;
+  }
+  50% {
+    left: 550px;
+    top: 330px;
+    z-index: 2;
+  }
+  55% {
+    left: 500px;
+    top: 340px;
+    z-index: 0;
+  }
+  60% {
+    left: 450px;
+    top: 330px;
+    z-index: 0;
+  }
+  65% {
+    left: 400px;
+    top: 320px;
+    z-index: 0;
+  }
+  70% {
+    left: 350px;
+    top: 310px;
+    z-index: 0;
+  }
+  75% {
+    left: 300px;
+    top: 300px;
+    z-index: 0;
+  }
+  80% {
+    left: 250px;
+    top: 290px;
+    z-index: 0;
+  }
+  85% {
+    left: 200px;
+    top: 280px;
+    z-index: 0;
+  }
+  90% {
+    left: 150px;
+    top: 270px;
+    z-index: 0;
+  }
+  95% {
+    left: 100px;
+    top: 250px;
+    z-index: 0;
+  }
+  100% {
+    left: 50px;
+    top: 230px;
+    z-index: 0;
+  }
+}/*# sourceMappingURL=animatie.css.map */

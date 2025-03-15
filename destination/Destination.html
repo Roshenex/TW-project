@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="destination.css" type="text/css">
+    <title>Destination</title>
+</head>
+<body onload="changeImage(number); addActiveBtn(number); pageLoadHide(); addBorder(document.title); checkPageLoad();">
+   <div class="top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" width="52" height="52" style="margin-top: 20px; align-self: center;">
+          <defs>
+              <linearGradient id="gradient" gradientTransform="rotate(90)">
+                  <stop offset="0%" stop-color="midnightblue" />
+                  <stop offset="25%" stop-color="mediumslateblue" />
+                  <stop offset="50%" stop-color="steelblue" />
+                  <stop offset="75%" stop-color="cornflowerblue" />
+              </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="52" height="52" class="background" />
+          <image href="../nav/icons/logo.svg" x="2" y="2" width="48" height="48" />
+      </svg>
+      <button class="top_menu-btn--open"></button>
+      <nav class="top_nav">
+          <button class="top_menu-btn--close"></button>
+          <a href="../home/home.html" class="top_link-home"><span>00</span>Home</a>
+          <a href="../destination/destination.html" class="top_link-destination"><span>01</span>Destination</a>
+          <a href="../crew/crew.html" class="top_link-crew"><span>02</span>Crew</a>
+          <a href="../technology/technology.html" class="top_link-technology"><span>03</span>Technology</a> 
+      </nav>
+  </div>
+
+ <div class="bottom">
+    <h2 class="subtitle"><span>01</span> Pick your destination</h2>
+    
+    <div class="container">
+     <img src="images/image-moon.webp" alt="MOON" class="d-image">
+
+     <div class="planet">
+
+        <nav class="nav">
+             <button class="nav_moon-btn">MOON</button>
+             <button class="nav_mars-btn" id="two" >MARS </button>
+             <button class="nav_europa-btn">EUROPA</button>
+             <button class="nav_titan-btn">TITAN</button>
+             <button class="animatie">GALAXY</button>
+             
+        </nav>
+
+        <div class="info">
+          
+             <h2 class="info_title-moon info_title">MOON</h2>
+             <h2 class="info_title-mars info_title">MARS</h2>
+             <h2 class="info_title-europa info_title">EUROPA</h2>
+             <h2 class="info_title-titan info_title">TITAN</h2>
+             
+             
+             <p class="info_desc-moon info_desc">
+                See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+             </p>
+               <p class="info_desc-mars info_desc">
+                Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!           
+             </p>
+             <p class="info_desc-europa info_desc">
+                The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+             </p>
+             <p class="info_desc-titan info_desc">
+                The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn. 
+             </p>
+             <hr class="info_line">
+             <div class="subinfo">
+               
+                 <div class="km">
+                  <p class="km_intro km_avg">AVG. DISTANCE </p>
+                    <p class="km_moon km_dist">628 MIL. KM</p>
+                    <p class="km_mars km_dist">225 MIL. KM</p>
+                    <p class="km_europa km_dist">384,400 KM</p>
+                    <p class="km_titan km_dist">1.6 BIL. KM</p>
+                 </div> 
+
+                 <div class="days">  
+                  <p class="days_intro days_dist"> EST. TRAVEL TIME </p>
+                      <p class="days_moon days_time">3 DAYS</p>
+                      <p class="days_mars days_time">9 MOUNTHS</p>
+                      <p class="days_europa days_time">3 YEARS</p>
+                      <p class="days_titan days_time">7 YEARS</p>
+                 </div>     
+            </div>
+          </div>
+        </div>   
+    </div>    
+ </div>
+ <script src="../nav/nav-bar.js"></script>
+ <script src="destination.js"></script>
+</body>
+</html>

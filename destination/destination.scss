@@ -1,0 +1,353 @@
+/* Import other SCSS files */
+@import "../nav/nav-bar";
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400&family=Bellefair&display=swap');
+
+/* Primary colors */
+$space-black: hsl(230, 35%, 7%);
+$space-teal: hsl(231, 77%, 90%);
+
+/*Destination page*/
+
+:root{
+    font-size: 100px;
+}
+*,
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px 1400px;
+    background-position: top left;
+    color: white;
+    min-height: 100vh;
+}
+
+.bottom{
+    text-transform: uppercase;
+    margin-left: 1.65rem;
+    margin-top: 0.74rem;
+
+    .subtitle{
+        font-size: 0.28rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 100;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+        cursor: default;
+    }
+
+    span{
+        color: hsl(226, 11%, 31%);
+        margin-right: 0.24rem;
+        font-weight: 800;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 120px;
+       
+    }
+
+    .d-image{
+       
+        content: url();
+        max-width: 500px;
+        font-size: 0.25rem;
+    }
+
+    .nav{
+
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20px; 
+        max-width: 250px;
+        
+        button{
+            margin-right: 10px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            color: #D0D6F9;
+            order: 5;
+        }  
+
+    }
+
+    .info{
+        font-family: 'Barlow Condensed', sans-serif;
+        min-width: 130px;
+        max-width: 600px;
+        min-height: 100px;
+        padding-left: 20px;
+        padding-right: 40px;
+        cursor: default;
+
+        &_title{
+            font-family: 'Bellefair', sans-serif;
+            font-size: 100px;
+            margin-top: 30px;
+            font-weight: 100;
+        }
+
+        &_desc{
+            text-transform: none;
+            color: #D0D6F9;
+            margin-top: 25px;
+            //text-align: left;
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        &_line{
+          margin-top: 25px;
+          border: none;
+          border-top: 2px solid #D0D6F9 ;
+          height: 0;
+        }
+    }
+    .subinfo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        
+    }
+
+.km{
+        min-width: 50px;
+        max-width: 700px;
+        max-height: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+        cursor: default;
+
+&_avg{
+    text-transform: none;
+    color: #D0D6F9;
+    margin-top: 25px;
+    text-align: left;
+    font-style: normal;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+}
+
+&_dist{
+    margin-top: 10px;
+    font-family:'Barlow';
+    font-size: 25px;
+}
+} 
+
+
+
+
+.days{
+    
+        min-width: 100px;
+        max-width: 700px;
+        max-height: 100px;
+        min-height: 50px;
+        padding-left: 70px;
+        padding-right: 30px;
+        cursor: default;
+
+
+&_dist{
+    text-transform: none;
+    color: #D0D6F9;
+    margin-top: 25px;
+    text-align: left;
+    font-style: normal;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+}
+&_time{
+    margin-top: 10px;
+    font-family:'Barlow';
+    font-size: 25px;
+}
+}
+
+}
+    
+
+/* Media Queries */
+
+
+@media only screen and (max-width: 1265px){
+    :root{
+        font-size: 85px;
+    }
+
+    .bottom{
+        
+
+        .info{
+            align-items: center;
+        }
+        
+
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .bottom{
+        margin-left: 0px;
+        margin-top: 20px;
+        
+        
+
+        .subtitle{
+            text-align: center;
+        }
+
+        .container{
+            flex-direction: column;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        .nav{
+            flex-direction: row;
+            margin-top: 36px;
+            min-width: 210px;
+            min-height: 60px;
+            
+           margin-left: auto;
+           margin-right: auto;
+        }
+
+        .info{
+            align-items: center;
+         &_title{
+            margin-top: 0px;
+            text-align: center;
+         }
+        
+        }
+       .subinfo{
+            margin-top: 0px;
+            align-items: center;
+         }
+
+        }
+       
+
+    }
+
+@media only screen and (max-width: 769px){
+    body{
+        background-image: url(images/background-destination-tablet.jpg);
+            background-size: 100vw 100vh;
+            background-size: 1500px  1100px   ;
+           
+    }
+
+    
+
+}
+
+
+
+@media only screen and (max-width: 600px){
+    body{
+        background-image: url(images/background-destination-mobile.jpg);
+        background-size: 100vw 100vh;
+        background-size: 900px  1100px;
+            
+    }
+    
+
+    :root{
+        font-size: 60px;
+    }
+
+    .bottom{
+        .subtitle{
+            align-items: center;
+            
+        }
+
+        .container{
+            margin-top: 12px;
+            
+
+        }
+
+        .d-image{
+            align-items: center;
+            max-width: 250px;
+            min-width: 150px;
+        }
+
+        .info{ 
+            margin-top: 15px;
+            &_title{
+                font-size: 1.5rem;
+            }
+
+            &_desc{
+                font-size: 0.25rem;
+                text-align: center;
+            }
+        }
+
+    .subinfo{
+            display: flex;
+            flex-direction: column; 
+            margin-top: 20px;
+            text-align: center;
+            
+        }   
+            
+         
+         
+         .km{
+            align-items: center;
+              &_avg{
+              margin-top :5px;
+              text-align: center;
+              }
+              &_dist{
+                margin-top :5px;
+                align-items: center;
+              }
+          }
+
+          
+        .days{
+            padding:0px ;
+            margin-top :15px;
+            align-items: center;
+              &_dist{
+                margin-top :25px;
+                align-items: center;
+             }
+
+             &_time{
+                margin-bottom: 30px;
+                align-items: center;
+              
+            }
+    }
+  }
+}
