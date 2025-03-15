@@ -1,0 +1,246 @@
+/* Import other SCSS files */
+@import "../nav/nav-bar";
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400&family=Bellefair&display=swap');
+
+/* Primary colors */
+$space-black: hsl(230, 35%, 7%);
+$space-teal: hsl(231, 77%, 90%);
+
+/* Mixin */
+
+@mixin tech-nav-btn{
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgb(107, 107, 107);
+    background-color: transparent;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.25rem;
+    font-weight: 100;
+    font-family: 'Bellefair', sans-serif;
+    cursor: pointer;
+
+    &:hover{
+        border-color: white;
+    }
+
+    &:active{
+        background-color: white;
+        color: $space-black;
+    }
+}
+
+/* Technology page */
+
+:root{
+    font-size: 100px;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px 1400px;
+    background-position: top left;
+    color: white;
+    min-height: 100vh;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    z-index: 0;
+}
+
+.bottom{
+    text-transform: uppercase;
+    margin-left: 1.65rem;
+    margin-top: 0.74rem;
+
+    .subtitle{
+        font-size: 0.28rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 100;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+        cursor: default;
+    }
+
+    span{
+        color: hsl(226, 11%, 31%);
+        margin-right: 0.24rem;
+        font-weight: 800;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .technology-image{
+        content: url();
+        min-width: 515px;
+        font-size: 0.25rem;
+        z-index: 1;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 300px;
+        order: 3;
+
+        button{
+            @include tech-nav-btn();
+        }
+    }
+
+    .info{
+        font-family: 'Barlow Condensed', sans-serif;
+        min-width: 330px;
+        max-width: 500px;
+        min-height: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: default;
+
+        &_intro{
+            font-size: 0.23rem;
+            color: $space-teal;
+            font-weight: 100;
+            word-spacing: 4px;
+            letter-spacing: 2px;
+        }
+
+        &_title{
+            font-family: 'Bellefair', sans-serif;
+            font-size: 0.54rem;
+            margin-top: 12px;
+            font-weight: 100;
+        }
+
+        &_desc{
+            text-transform: none;
+            font-size: 0.23rem;
+            color: $space-teal;
+            margin-top: 15px;
+            text-align: left;
+            font-weight: 100;
+            line-height: 30px;
+        }
+    }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1265px){
+    :root{
+        font-size: 75px;
+    }
+
+    .bottom{
+        .nav{
+            min-height: 250px;
+
+            button{
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .info{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .bottom{
+        margin-left: 0;
+
+        .subtitle{
+            margin-left: 55px;
+        }
+
+        .container{
+            flex-direction: column;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .technology-image{
+            content: url();
+            width: 100vw;
+        }
+
+        .nav{
+            flex-direction: row;
+            margin-top: 56px;
+            min-width: 210px;
+            min-height: 60px;
+            order: 0;
+        }
+
+        .info{
+            margin-top: 60px;
+        }
+    }
+}
+
+@media only screen and (max-width: 769px){
+    body{
+        background-image: url(images/background-technology-tablet.jpg);
+        background-size: 1648px 1098px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    :root{
+        font-size: 60px;
+    }
+
+    .bottom{
+        .subtitle{
+            margin-left: 0;
+            text-align: center;
+        }
+
+        .container{
+            margin-top: 32px;
+        }
+
+        .nav{
+            margin-top: 32px;
+        }
+
+        .info{
+            margin-top: 26px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            &_title{
+                font-size: 0.50rem;
+            }
+
+            &_desc{
+                font-size: 0.25rem;
+            }
+        }
+    }
+}
